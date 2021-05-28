@@ -16,51 +16,51 @@ const Home = () => {
 
   return (
     <MovieContainer>
-          <div>
-            <h2>Whats Popular</h2>
-          </div>
+      <div>
+        <h2>Whats Popular</h2>
+      </div>
 
-          <Movies>
-            {popular.map((movie) => (
-              <Movie
-                name={movie.title}
-                poster={movie.poster_path}
-                rating={movie.vote_average}
-                key={movie.id}
-                id={movie.id}
-              />
-            ))}
-          </Movies>
-          {/* toprated movie  */}
-          <div>
-            <h2>Whats TopRated</h2>
-          </div>
-          <Movies>
-            {toprated.map((movie) => (
-              <Movie
-                name={movie.title}
-                poster={movie.poster_path}
-                rating={movie.vote_average}
-                key={movie.id}
-                id={movie.id}
-              />
-            ))}
-          </Movies>
-          <div>
-            <h2>Whats Upcoming</h2>
-          </div>
+      <Movies>
+        {popular.map((movie) => (
+          <Movie
+            name={movie.title}
+            poster={movie.poster_path}
+            rating={movie.vote_average}
+            key={movie.id}
+            id={movie.id}
+          />
+        ))}
+      </Movies>
+      {/* toprated movie  */}
+      <div>
+        <h2>Whats TopRated</h2>
+      </div>
+      <Movies>
+        {toprated.map((movie) => (
+          <Movie
+            name={movie.title}
+            poster={movie.poster_path}
+            rating={movie.vote_average}
+            key={movie.id}
+            id={movie.id}
+          />
+        ))}
+      </Movies>
+      <div>
+        <h2>Whats Upcoming</h2>
+      </div>
 
-          <Movies>
-            {upcoming.map((movie) => (
-              <Movie
-                name={movie.title}
-                poster={movie.poster_path}
-                rating={movie.vote_average}
-                key={movie.id}
-                id={movie.id}
-              />
-            ))}
-          </Movies>
+      <Movies>
+        {upcoming.map((movie) => (
+          <Movie
+            name={movie.title}
+            poster={movie.poster_path}
+            rating={movie.vote_average}
+            key={movie.id}
+            id={movie.id}
+          />
+        ))}
+      </Movies>
     </MovieContainer>
   );
 };
@@ -71,10 +71,10 @@ const MovieContainer = styled(motion.div)`
     align-items: center;
     margin: 1rem 0;
   }
-  @media (max-width:700px){
-    div{
-      margin: .5rem 0;
-      h2{
+  @media (max-width: 700px) {
+    div {
+      margin: 0.5rem 0;
+      h2 {
         font-size: 1rem;
       }
     }
@@ -85,8 +85,8 @@ const Movies = styled(motion.div)`
   overflow-x: auto;
   gap: 1rem;
   margin: 2rem 0;
-  @media (max-width: 700px){
-    gap: .5rem;
+  @media (max-width: 700px) {
+    gap: 0.5rem;
     margin: 1rem 0;
   }
 `;

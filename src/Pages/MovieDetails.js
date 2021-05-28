@@ -5,6 +5,7 @@ import { useSelector} from "react-redux";
 import { DurationHandler } from "../Util";
 import PhotoVideoUI from "../Components/photosVideos";
 import CastUI from "../Components/CastCrew";
+import loading from '../loading.gif'
 
 
 const MovieDetails = () => {
@@ -19,6 +20,7 @@ const MovieDetails = () => {
   // console.log(typeof videos.length);
   return (
     <>
+    {isLoading && <Loading><img src={loading} alt="Loading gif" /></Loading>}
       {!isLoading && (
         <Moviedetailsinfo>
           <div className="trailer">
@@ -119,5 +121,11 @@ const Moviedetailsinfo = styled(motion.div)`
     }
   }
 `;
-
+const Loading = styled.div`
+display: flex;
+justify-content:center;
+align-items:center;
+width: 100%;
+height: 100vh;
+`
 export default MovieDetails;
