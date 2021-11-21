@@ -3,4 +3,6 @@
 - React js
 - Tmdb Api
 - Axios
-###Live Link : https://tmdbmovieapp.vercel.app/
+- Redux
+- styled Components
+- Live Link : https://tmdbmovieapp.vercel.app/
